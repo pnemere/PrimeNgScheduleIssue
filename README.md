@@ -3,6 +3,10 @@
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.6.4.
 
 This was then upgraded to Angular6 by hand (editing packages.json, adding PrimeNg, FullCalendar)
+Schedule
+
+Added `import {ScheduleModule} from 'primeng/schedule';` and `ScheduleModule` to import list in app.module.ts
+Added `<p-schedule></p-schedule>` to App.component.html
 
 This was then run to update the json file:
 ng update @angular/cli 
