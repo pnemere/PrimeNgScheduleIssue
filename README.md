@@ -1,27 +1,28 @@
-# CalendarTest2
+# PrimeNgScheduleIssue
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.8.
 
-## Development server
+## Schedule
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Added `"primeng": "^6.0.0"`, `"primeicons": "^1.0.0-beta.6"`, `"fullcalendar": "^3.6.2"` to packages.json
+npm install
+Added `"node_modules/primeng/resources/primeng.min.css"`, `"node_modules/primeng/resources/themes/omega/theme.css"`, `"node_modules/fullcalendar/dist/fullcalendar.min.css"` to styles in angular.json
+Added `"node_modules/jquery/dist/jquery.min.js"`, `"node_modules/moment/min/moment.min.js"`, `"node_modules/fullcalendar/dist/fullcalendar.min.js"` to scripts in angular.json
+Added `import {ScheduleModule} from 'primeng/schedule';` and `ScheduleModule` to import list in app.module.ts
+Added `<p-schedule></p-schedule>` to App.component.html
 
-## Code scaffolding
+When run with `ng serve` the app shows the following errors and seems to periodically re-display the error:
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+```
+AppComponent.html:21 ERROR TypeError: e.addClass is not a function
+    at t.initialRender (fullcalendar.min.js:10)
+    at t.render (fullcalendar.min.js:10)
+    at Schedule.push../node_modules/primeng/components/schedule/schedule.js.Schedule.initialize (schedule.js:222)
+    at Schedule.push../node_modules/primeng/components/schedule/schedule.js.Schedule.ngAfterViewChecked (schedule.js:208)
+    at callProviderLifecycles (core.js:9355)
+    at callElementProvidersLifecycles (core.js:9326)
+    at callLifecycleHooksChildrenFirst (core.js:9316)
+    at checkAndUpdateView (core.js:10252)
+    at callViewAction (core.js:10484)
+    at execComponentViewsAction (core.js:10426)
+```
