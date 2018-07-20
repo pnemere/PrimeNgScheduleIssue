@@ -4,12 +4,12 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## Schedule
 
-Added `"primeng": "^6.0.0"`, `"primeicons": "^1.0.0-beta.6"`, `"fullcalendar": "^3.6.2"` to packages.json
+- Added `"primeng": "^6.0.0"`, `"primeicons": "^1.0.0-beta.6"`, `"fullcalendar": "^3.6.2"` to packages.json
 npm install
-Added `"node_modules/primeng/resources/primeng.min.css"`, `"node_modules/primeng/resources/themes/omega/theme.css"`, `"node_modules/fullcalendar/dist/fullcalendar.min.css"` to styles in angular.json
-Added `"node_modules/jquery/dist/jquery.min.js"`, `"node_modules/moment/min/moment.min.js"`, `"node_modules/fullcalendar/dist/fullcalendar.min.js"` to scripts in angular.json
-Added `import {ScheduleModule} from 'primeng/schedule';` and `ScheduleModule` to import list in app.module.ts
-Added `<p-schedule></p-schedule>` to App.component.html
+- Added `"node_modules/primeng/resources/primeng.min.css"`, `"node_modules/primeng/resources/themes/omega/theme.css"`, `"node_modules/fullcalendar/dist/fullcalendar.min.css"` to styles in angular.json
+- Added `"node_modules/jquery/dist/jquery.min.js"`, `"node_modules/moment/min/moment.min.js"`, `"node_modules/fullcalendar/dist/fullcalendar.min.js"` to scripts in angular.json
+- Added `import {ScheduleModule} from 'primeng/schedule';` and `ScheduleModule` to import list in app.module.ts
+- Added `<p-schedule></p-schedule>` to App.component.html
 
 When run with `ng serve` the app shows the following errors and seems to periodically re-display the error:
 
